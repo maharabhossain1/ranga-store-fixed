@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FakeStore opi</title>
+    <title>Posh Square</title>
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Latest compiled and minified CSS Bootstrap-05 -->
     <link
@@ -27,10 +27,17 @@
     <main class="main">
       <div class="search-field">
         <div class="search-box">
-          <input id="input-field" class="search-field" type="text" />
+          <div class="input-field-1">
+            <input
+              id="input-field"
+              class="search-field"
+              type="text"
+              placeholder="Search products"
+            />
+          </div>
           <button
             type="button"
-            class="btn btn-primary search-button"
+            class="btn search-button-1 text-light"
             data-toggle="button"
             aria-pressed="false"
             autocomplete="off"
@@ -43,7 +50,7 @@
       </div>
       <div class="row">
         <div class="col-md-9 col-lg-9 col-sm-7">
-          <div id="all-products" class=""></div>
+          <div id="all-products"></div>
         </div>
         <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
           <div class="cart" id="my-cart">
@@ -90,7 +97,9 @@
               </tbody>
             </table>
             <div class="parces text-center">
-              <button class="btn btn-primary text-center">Buy Now</button>
+              <button id="buy-now-btn" class="btn text-center text-light">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
