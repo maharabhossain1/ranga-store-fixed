@@ -217,22 +217,38 @@ const showProducts = (products) => {
     const image = product.image; // Products Images fixed
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product m-2">
-      <div>
-    <img class="product-image" src=${image}></img>
-      </div>
-      <div class="my-3">
-      <h5>${product.title}</h5>
-      <p>Category: ${product.category}</p>
-      <h4>Price: $ ${product.price}</h4>
-      <p>Rating : <span>${product.rating.rate}</span>(<span>${product.rating.count}</span>)</p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn text-light">Add to cart</button>
-      <button id="details-btn" class="btn text-light">Details</button>
-      </div>
+    div.innerHTML = `
+    <div class="single-product m-2">
+        <div>
+            <img class="product-image" src=${image}></img>
+        </div>
+        <div class="my-3">
+            <h5>
+             ${product.title}
+            </h5>
+            <p>
+              Category: ${product.category}
+            </p>
+            <h4>
+              Price: $ ${product.price}
+            </h4>
+            <p>
+              Rating : <span>${product.rating.rate}</span>(<span class="text-muted">${product.rating.count}</span>)
+            </p>
+            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn text-light btn-effect mx-2">
+              Add to cart
+            </button>
+            <button id="details-btn" class="btn text-light mx-2 btn-effect2">
+              Details
+            </button>
+        </div>
+    </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// information adding to cart function
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -242,6 +258,7 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+// Input value convert String to Number function
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = Number(element);

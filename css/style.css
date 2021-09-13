@@ -10,6 +10,9 @@ body {
   background-color: var(--main-bg-color) !important;
   font-family: "Montserrat", sans-serif;
 }
+/**********************
+ search-box css section
+**********************/
 .search-field {
   border: none;
   border-radius: 50px;
@@ -40,6 +43,10 @@ body {
   border-radius: 25px;
   margin-left: 20px;
 }
+
+/* ***************************
+All products cart section css 
+******************************/
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -52,15 +59,15 @@ body {
 }
 .single-product {
   background-color: var(--main-card-color);
-  border-radius: 5px;
+  border-radius: 10px;
   height: 28rem;
   padding: 10px;
   transition: 0.6s;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  border: 1px solid var(--main-btn-color);
 }
 .product-image {
   width: 150px;
@@ -69,7 +76,6 @@ body {
 .cart {
   background-color: var(--main-card-color);
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
@@ -86,6 +92,20 @@ body {
 #details-btn {
   background-color: var(--main-btn-color2);
 }
+
+/* button hover effects  */
+.btn-effect:hover {
+  box-shadow: 12px 12px 16px 0 #6c42df86,
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-effect2:hover {
+  box-shadow: 12px 12px 16px 0 #362b485e,
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+/************************
+ responsive section css 
+*************************/
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -110,3 +130,5 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* --------------------***-------------------- */
